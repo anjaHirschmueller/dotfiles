@@ -1,8 +1,16 @@
 #!/bin/bash
-
+echo "install zsh"
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+echo "get zsh extensions"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-curl -o ~/.zshrc https://github.com/anjaHirschmueller/dotfiles/raw/6686b94cf21ae0ea68997f50cee8ce8269719750/.zshrc
+
+echo "get my dotfile"
+curl -o ~/.zshrc https://raw.githubusercontent.com/anjaHirschmueller/dotfiles/zsh/terminal/.zshrc
 source ~/.zshrc
+
+echo "make zsh default shell"
+chsh -s $(which zsh) 
+echo "SHELL: $SHELL"
