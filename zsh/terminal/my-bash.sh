@@ -8,7 +8,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 echo "get my dotfile"
-curl -o ~/.zshrc https://raw.githubusercontent.com/anjaHirschmueller/dotfiles/zsh/terminal/.zshrc
+curl -o ~/.zshrc https://raw.githubusercontent.com/anjaHirschmueller/dotfiles/main/zsh/terminal/.zshrc
 source ~/.zshrc
 
 echo "make zsh default shell"
