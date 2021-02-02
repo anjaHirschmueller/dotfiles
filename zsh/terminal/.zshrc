@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker helm kubectl zsh-autosuggestions)
+plugins=(docker helm kubectl zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,5 +100,3 @@ source $ZSH/oh-my-zsh.sh
 alias k="kubectl"
 
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
