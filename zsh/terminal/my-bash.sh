@@ -14,3 +14,7 @@ source ~/.zshrc
 echo "make zsh default shell"
 chsh -s $(which zsh) 
 echo "SHELL: $SHELL"
+
+echo "change kubectl editor to nano"
+export KUBE_EDITOR=$(which nano)
+echo "KUBE_EDITOR= $KUBE_EDITOR"
